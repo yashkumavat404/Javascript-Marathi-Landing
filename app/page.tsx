@@ -68,11 +68,11 @@ export default function Home() {
   const [preview, setPreview] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const pages = [
-    {src:"/previews/page-4.png",title:"सोप्या भाषेत संकल्पना",note:"Beginner-friendly explanation"},
-    {src:"/previews/page-11.png",title:"पहिला JavaScript code",note:"Code example"},
-    {src:"/previews/page-15.png",title:"Objects आणि methods",note:"Diagram + code"},
-    {src:"/previews/page-20.png",title:"Comments समजून घ्या",note:"Visual learning"},
-    {src:"/previews/page-39.png",title:"पुस्तकातील आणखी एक पान",note:"Actual PDF page"}
+    {src:"/previews/page-4.webp",title:"सोप्या भाषेत संकल्पना",note:"Beginner-friendly explanation"},
+    {src:"/previews/page-11.webp",title:"पहिला JavaScript code",note:"Code example"},
+    {src:"/previews/page-15.webp",title:"Objects आणि methods",note:"Diagram + code"},
+    {src:"/previews/page-20.webp",title:"Comments समजून घ्या",note:"Visual learning"},
+    {src:"/previews/page-39.webp",title:"पुस्तकातील आणखी एक पान",note:"Actual PDF page"}
   ];
   const groups = [
     {name:"FOUNDATIONS",range:"01—10",start:0,end:10},
