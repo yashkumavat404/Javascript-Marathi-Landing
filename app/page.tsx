@@ -94,7 +94,7 @@ export default function Home() {
         <div className="hero-reassurance"><span><Check size={14}/> सोपी मराठी</span><span><Check size={14}/> Original code examples</span><span><Check size={14}/> Digital textbook</span></div>
       </div>
       <div className="hero-art"><div className="art-orbit orbit-one"/><div className="art-orbit orbit-two"/>
-        <div className="book-3d book-3d-image"><img src="/book-cover-cutout.webp" alt="JavaScript सोप्या मराठीत — 3D textbook cover" /></div>
+        <div className="book-3d book-3d-image"><img src="/book-cover-cutout.png" alt="JavaScript सोप्या मराठीत — 3D textbook cover" /></div>
         <div className="float-chip chip-code">&lt;/&gt; <span>LEARN BY EXAMPLES</span></div><div className="float-chip chip-js"><span className="js-mini">JS</span><span>Code + <small>Marathi</small></span></div>
         <div className="float-card card-syntax"><span className="syntax-label">YOUR FIRST LINE OF JAVASCRIPT</span><code>window.<b>alert</b>("Hello world!");</code><div className="syntax-status"><span/> Ready to learn</div></div>
         <div className="float-card card-chapters"><span className="chapter-icon"><BookOpen size={20}/></span><span><strong>39 Chapters</strong><small>Basics to JavaScript clock</small></span></div><div className="art-caption"><span className="caption-line"/> YOUR FIRST STEP INTO CODE</div>
