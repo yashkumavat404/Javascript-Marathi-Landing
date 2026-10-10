@@ -45,7 +45,7 @@ const chapters: [string, string][] = [
 ["JavaScript चे घड्याळ बनवूया","Building a JavaScript Clock"]
 ];
 
-const paymentLink = process.env.NEXT_PUBLIC_PAYMENT_LINK || "";
+const paymentLink = process.env.NEXT_PAYMENT_LINK || "";
 const buy = () => {
   if (!paymentLink || paymentLink === "YOUR_PAYMENT_LINK_HERE") {
     alert("खरेदी सुरू करण्यासाठी payment link अजून जोडलेली नाही. कृपया वेबसाइटच्या मालकाशी संपर्क साधा.");
