@@ -1,1 +1,1 @@
-Selected page previews generated from the supplied PDF for the landing page visual preview section.
+Selected page previews generated from the supplied PDF for the landing page visual preview section.\n
