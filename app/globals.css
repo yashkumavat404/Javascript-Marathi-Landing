@@ -10,3 +10,63 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 .success-page{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#dbeafe,transparent 65%),#f8fafc}.success-card{max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:22px;padding:42px;text-align:center;box-shadow:0 25px 70px #17255412}.success-icon{width:60px;height:60px;margin:0 auto 22px;border-radius:18px;background:#eff6ff;color:#2563eb;display:grid;place-items:center}.success-card .section-kicker{justify-content:center}.success-card h1{font-family:"Noto Sans Devanagari";font-size:30px;line-height:1.5;color:#172554;margin:15px 0}.success-card p{font-family:"Noto Sans Devanagari";font-size:13px;line-height:2;color:#64748b;margin-bottom:25px}.success-card .button{margin:auto}@media(max-width:600px){.success-card{padding:30px 22px}.success-card h1{font-size:24px}}
+
+
+
+/* Brand palette: forest green, warm ivory and terracotta */
+:root {
+  --brand-forest: #013328;
+  --brand-terracotta: #CC8B65;
+  --brand-ivory: #E3DCD2;
+  --brand-ink: #100C0D;
+  --brand-paper: #F8F5F0;
+}
+body { background: var(--brand-paper); color: var(--brand-ink); }
+.announcement { background: var(--brand-forest); color: var(--brand-ivory); }
+.announcement strong { color: var(--brand-terracotta); }
+.navbar { background: rgba(248,245,240,.94); border-bottom-color: rgba(1,51,40,.12); }
+.brand-mark, .feature-icon, .problem-icon { background: var(--brand-forest); color: var(--brand-ivory); }
+.nav-links a:hover, .brand small { color: var(--brand-forest); }
+.button-primary, .nav-buy, .mobile-nav-buy, .mobile-buy-bar .button {
+  background: var(--brand-terracotta); color: var(--brand-ink); border-color: var(--brand-terracotta);
+  box-shadow: 0 8px 20px rgba(204,139,101,.22);
+}
+.button-primary:hover, .nav-buy:hover, .mobile-nav-buy:hover, .mobile-buy-bar .button:hover {
+  background: #B97853; border-color: #B97853; color: #100C0D;
+}
+.button-ghost, .button-outline { color: var(--brand-forest); border-color: rgba(1,51,40,.25); }
+.hero h1 span, .section-title span, .final-cta h2 span, .price, .final-price strong { color: var(--brand-forest); }
+.hero .eyebrow, .section-kicker { color: #8C583B; }
+.stats-strip, .feature-card, .problem-card, .audience-card, .value-note, .faq-section {
+  background-color: var(--brand-ivory); border-color: rgba(1,51,40,.12);
+}
+.solution-section, .code-section, .journey-section, .footer {
+  background: var(--brand-forest); color: var(--brand-ivory);
+}
+.solution-section .section-title, .code-section .section-title, .journey-section .section-title { color: var(--brand-ivory); }
+.solution-section .section-title span, .code-section .section-title span { color: var(--brand-terracotta); }
+.pricing-card { background: linear-gradient(125deg, #013328, #064638 68%, #100C0D); }
+.pricing-box { background: var(--brand-ivory); color: var(--brand-ink); }
+.pricing-button { background: var(--brand-terracotta); color: var(--brand-ink); }
+.group-heading, .chapter-section { background-color: #F1EBE3; }
+.chapter-row:hover { background: #E3DCD2; }
+.preview-paper, .editor { border-color: rgba(1,51,40,.18); }
+.faq-section { background: #F1EBE3; }
+.faq-item, .faq-list { border-color: rgba(1,51,40,.2); }
+.faq-item>button, .faq-layout .section-title { color: var(--brand-forest); }
+.final-cta:before { background: radial-gradient(ellipse, rgba(204,139,101,.22), transparent 70%); }
+.mobile-buy-bar { background: rgba(248,245,240,.96); border-top-color: rgba(1,51,40,.18); }
+.success-page { background: radial-gradient(ellipse at top, rgba(204,139,101,.22), transparent 65%), var(--brand-forest); }
+.success-card { background: var(--brand-ivory); border-color: rgba(227,220,210,.45); }
+.success-icon { background: var(--brand-forest); color: var(--brand-ivory); }
+.success-card h1 { color: var(--brand-forest); }
+.success-card .section-kicker { color: #8C583B; }
+.success-book { background: rgba(1,51,40,.07); border-color: rgba(1,51,40,.16); }
+.success-book-icon { background: var(--brand-forest); color: var(--brand-ivory); }
+.success-download { background: var(--brand-terracotta); color: var(--brand-ink); }
+.success-home { color: var(--brand-forest); }
+.success-footer { color: var(--brand-ivory); }
+@media (max-width: 720px) {
+  .nav-links { background: var(--brand-paper); }
+  .menu-toggle { color: var(--brand-forest); border-color: rgba(1,51,40,.2); }
+}
