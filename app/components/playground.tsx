@@ -86,7 +86,7 @@ export default function Playground() {
         };
         let error = "";
         try {
-          const fn = new Function("console", '"use strict";\\n' + event.data.code);
+          const fn = new Function("console", '"use strict";\n' + event.data.code);
           fn(fakeConsole);
         } catch (e) { error = e && e.message ? e.message : "Code could not run."; }
         parent.postMessage({type:"codeshiksha-result", logs, error}, "*");
