@@ -262,3 +262,7 @@ body { background: var(--brand-paper); color: var(--brand-ink); }
   .success-book-mark { width: 20px; }
   .success-card .success-download { font-size: 12px; }
 }
+
+
+/* Load the CodeShiksha platform design system after the original book styles. */
+@import "./platform.css";
