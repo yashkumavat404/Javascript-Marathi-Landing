@@ -1,0 +1,16 @@
+import { PageFrame, PageHeading } from "../components/platform-shell";
+import { BookOpen, Compass, GraduationCap, HeartHandshake } from "lucide-react";
+import Link from "next/link";
+
+export const metadata = {
+  title: "About CodeShiksha | Programming in Marathi",
+  description: "Learn about CodeShiksha's demonstration mission to make programming concepts more approachable for Marathi-speaking learners.",
+};
+
+export default function AboutPage() {
+ return <PageFrame><main className="platform-page"><div className="platform-container">
+  <PageHeading eyebrow="ABOUT CODESHIKSHA" title="Programming should feel approachable." description="CodeShiksha is an original demonstration educational platform concept focused on presenting programming fundamentals in a way Marathi-speaking learners can explore at their own pace."/>
+  <section className="platform-section" style={{paddingTop:0}}><div className="featured-course-panel"><div><span className="platform-eyebrow">OUR PURPOSE</span><h2>Start from what you know.</h2><p>Technical vocabulary can feel like a wall when you're learning programming for the first time. Explanations in a familiar language can make it easier to connect new terminology with practical examples.</p><p>This project begins with an existing JavaScript Marathi digital textbook and adds a cohesive learning-platform demonstration around it.</p><Link className="platform-btn" href="/courses/javascript-marathi">Explore the learning path</Link></div><div className="featured-curriculum"><h3>What this demo emphasizes</h3>{[[BookOpen,"Marathi-first explanation"],[Compass,"Clear learning roadmap"],[GraduationCap,"Beginner-friendly progression"],[HeartHandshake,"Accessible learning experience"]].map(([Icon,title])=><div className="curriculum-row" key={title as string}><span style={{display:"flex",alignItems:"center",gap:9}}><Icon size={17}/>{title as string}</span><span>Core principle</span></div>)}</div></div></section>
+  <section className="platform-section"><div className="platform-section-head"><div><span className="platform-eyebrow">TRANSPARENCY</span><h2>What is implemented today?</h2><p>The platform presents some working frontend interactions along with clearly labeled demo experiences.</p></div></div><div className="resource-grid">{[{title:"Existing book",body:"The repository's Marathi textbook PDF, cover and preview images are preserved.",href:"/book/javascript-marathi",label:"Current product"},{title:"Interactive samples",body:"Course discovery, sample lessons, local progress and the JavaScript playground illustrate possible learning flows.",href:"/courses",label:"Demonstration UI"},{title:"Payment limitation",body:"The existing server-side /buy route redirects to the configured payment link, but payment verification and protected PDF access are not implemented.",href:"/terms",label:"Read terms"}].map(item=><article className="resource-card" key={item.title}><span>{item.label}</span><h3>{item.title}</h3><p>{item.body}</p><Link href={item.href}>Learn more →</Link></article>)}</div></section>
+ </div></main></PageFrame>;
+}
