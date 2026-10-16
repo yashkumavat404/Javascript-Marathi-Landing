@@ -1,14 +1,32 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./platform.css";
 
 export const metadata: Metadata = {
-  title: "JavaScript सोप्या मराठीत | Beginners JavaScript Course — ₹199",
-  description: "शून्यापासून JavaScript शिका — beginner-friendly Marathi explanations, JavaScript code examples, practical exercises आणि 39 chapters असलेला digital textbook. फक्त ₹199.",
+  metadataBase: new URL("https://javascript-marathi-landing.vercel.app"),
+  title: {
+    default: "CodeShiksha | Learn JavaScript in Marathi",
+    template: "%s | CodeShiksha",
+  },
+  description: "Explore JavaScript through beginner-friendly Marathi explanations, code examples, a structured learning roadmap, and an existing digital textbook.",
+  applicationName: "CodeShiksha",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "JavaScript — सोप्या मराठीत",
-    description: "शून्यापासून JavaScript शिकूया! 39 धडे असलेला Marathi beginner-friendly digital textbook.",
+    title: "CodeShiksha | Learn JavaScript in Marathi",
+    description: "Beginner-friendly programming education and JavaScript textbook resources in Marathi.",
     type: "website",
     locale: "mr_IN",
+    siteName: "CodeShiksha",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CodeShiksha | Learn JavaScript in Marathi",
+    description: "A Marathi-first JavaScript learning platform demonstration.",
+  },
+  icons: {
+    icon: "/favicon.svg",
   },
 };
 
