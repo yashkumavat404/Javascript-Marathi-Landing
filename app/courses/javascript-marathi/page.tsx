@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, Circle, Clock3, Code2, PlayCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, CheckCircle2, Circle, Clock3, Code2 } from "lucide-react";
 import { PageFrame, PageHeading } from "../../components/platform-shell";
 import { courses, lessonContent } from "../../components/course-data";
 
@@ -20,12 +20,12 @@ const lessonSlugs = [
 
 export default function JavaScriptCoursePage() {
   const [completed, setCompleted] = useState<string[]>([]);
-  const [showPreview, setShowPreview] = useState(false);
+  
   useEffect(() => {
     try { setCompleted(JSON.parse(localStorage.getItem("codeshiksha-completed-lessons") || "[]")); } catch { setCompleted([]); }
   }, []);
   const progress = Math.round(completed.length / lessonSlugs.length * 100);
-  const sections = useMemo(() => course.outcomes, []);
+  const sections = course.outcomes;
   return <PageFrame><main className="platform-page"><div className="platform-container">
     <PageHeading eyebrow="FEATURED COURSE · DEMONSTRATION" title="JavaScript for Beginners — Marathi" description="JavaScript ची सुरुवात concept-by-concept करा. खालील course detail आणि lessons हे learning experience दाखवणारे demo आहेत; verified hosted video course किंवा instructor service नाही."/>
     <section className="platform-section" style={{paddingTop:0}}>
