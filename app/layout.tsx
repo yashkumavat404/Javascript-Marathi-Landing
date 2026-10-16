@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: "A Marathi-first JavaScript learning platform demonstration.",
   },
   icons: {
-    icon: "/favicon.svg",
   },
 };
 
