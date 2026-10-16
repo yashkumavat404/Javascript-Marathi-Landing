@@ -1,0 +1,15 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowRight, CheckCircle2, Code2, Eye, EyeOff } from "lucide-react";
+import { PageFrame, PageHeading } from "../components/platform-shell";
+
+export default function LoginPage(){
+ const [showPassword,setShowPassword]=useState(false);
+ const [email,setEmail]=useState("");
+ const [password,setPassword]=useState("");
+ const [notice,setNotice]=useState("");
+ const submit=(e:React.FormEvent)=>{e.preventDefault();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setNotice("कृपया valid email address द्या.");return;}if(password.length<6){setNotice("Demo form साठी password field मध्ये किमान 6 characters लिहा.");return;}setNotice("Demo only: हा form validate झाला आहे, पण कोणतेही account authenticate केलेले नाही. Dashboard preview उघडू शकता.");};
+ return <PageFrame><main className="platform-page"><div className="platform-container"><PageHeading eyebrow="ACCOUNT INTERFACE · DEMO" title="Welcome back." description="Sign-in interface preview. Authentication is not configured in this project, so this form does not log you into an account."/><section className="platform-section" style={{paddingTop:0}}><form className="platform-form-card" onSubmit={submit}><div style={{display:"flex",gap:11,alignItems:"center",marginBottom:24}}><span className="platform-brand-icon"><Code2 size={22}/></span><div><strong style={{fontSize:14,color:"#15213b"}}>Log in to CodeShiksha</strong><div style={{fontSize:10,color:"#78859a",marginTop:4}}>Demonstration interface</div></div></div><div className="platform-field"><label htmlFor="login-email">Email address</label><input id="login-email" type="email" autoComplete="email" value={email} onChange={e=>setEmail(e.target.value)} required placeholder="you@example.com"/></div><div className="platform-field"><label htmlFor="login-password">Password</label><div style={{display:"flex",gap:8}}><input id="login-password" style={{flex:1}} type={showPassword?"text":"password"} autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required minLength={6} placeholder="At least 6 characters"/><button className="platform-btn platform-btn-secondary" type="button" aria-label={showPassword?"Hide password":"Show password"} onClick={()=>setShowPassword(!showPassword)}>{showPassword?<EyeOff size={15}/>:<Eye size={15}/>}</button></div></div><div className="platform-form-notice">Demo only: email and password are checked in the browser and are not sent to a server, stored, or used to authenticate you.</div><button className="platform-btn" type="submit" style={{width:"100%"}}>Continue <ArrowRight size={15}/></button>{notice&&<p role="status" className="platform-inline-notice">{notice}</p>}<p style={{fontSize:11,color:"#76839a",lineHeight:1.8,marginTop:20}}>New to CodeShiksha? <Link href="/signup" style={{color:"#2855d9",fontWeight:700}}>Create a demo profile</Link></p><Link className="platform-link" href="/dashboard">Preview student dashboard <ArrowRight size={14}/></Link></form></section></div></main></PageFrame>;
+}
