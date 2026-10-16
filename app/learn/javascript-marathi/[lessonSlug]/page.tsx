@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Circle, Code2, Play, RefreshCw } from "lucide-react";
-import { PageFrame } from "../../../../components/platform-shell";
-import { lessonContent } from "../../../../components/course-data";
+import { PageFrame } from "../../../components/platform-shell";
+import { lessonContent } from "../../../components/course-data";
 
 const lessonSlugs: [string, string][] = [
   ["programming-chi-olakh", "Programming ची ओळख"],
