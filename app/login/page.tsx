@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, Code2, Eye, EyeOff } from "lucide-react";
+import { ArrowRight, Code2, Eye, EyeOff } from "lucide-react";
 import { PageFrame, PageHeading } from "../components/platform-shell";
 
 export default function LoginPage(){
