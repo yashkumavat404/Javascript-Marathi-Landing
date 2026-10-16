@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { BookOpen, Code2, Menu, X, ChevronDown, Search, ArrowUpRight } from "lucide-react";
+import { Code2, Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 
 const courseLinks = [
   { href: "/courses", title: "सर्व courses", detail: "Explore learning paths" },
